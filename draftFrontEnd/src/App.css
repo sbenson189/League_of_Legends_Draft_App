@@ -1,0 +1,437 @@
+body {
+  background-color: #111111;
+  color: #7E7E7E;
+  text-shadow: 2px 2px 3px black;
+  font-weight: 900;
+  text-align: center;
+  color: transparent;
+  text-shadow: 0 0 0 #7E7E7E;
+}
+
+/*** Nav Bar ***/
+
+.NavBar-options a {
+  text-decoration: none;
+  color: crimson;
+  font-size: large;
+  color: transparent;
+  text-shadow: 0 0 0 #7E7E7E;
+}
+
+.NavBar-options a:hover {
+  color: transparent;
+  text-shadow: 0 0 0 rgb(37, 37, 37);
+  border-bottom: solid rgb(243, 243, 243, 0.788) 3px;
+  transition: .2s;
+}
+
+.NavBar-draft {
+  margin-right: 5px;
+}
+
+.NavBar-stats {
+  margin-left: 5px;
+}
+
+.home {
+  border-right: solid red 1px;
+  margin-right: 2px;
+  padding-right: 6px;
+}
+
+.draft {
+  border-right: solid red 1px;
+  margin-right: 2px;
+  padding-right: 6px
+}
+
+/*** Draft Picks ***/
+
+/* Draft container and ban container titles */
+
+.blueTeamTitle {
+  margin-top: 4px;
+  margin-bottom: 6px;
+  border-bottom: solid rgba(0, 0, 255, 0.25) 6px;
+  text-shadow: 0 0 0 rgb(4, 0, 253);
+  color: transparent;
+  
+}
+
+.redTeamTitle {
+  margin-top: 4px;
+  margin-bottom: 6px;
+  color: transparent;
+  text-shadow: 0 0 0 rgba(255, 0, 0, 0.75);
+  border-bottom: solid rgba(255, 0, 0, 0.25) 6px;
+}
+
+/* Draft pick elements and images */
+
+.bluePick, .redPick {
+  margin: 5px;
+  width: 105px;
+  height: 185px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.74);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: black;
+}
+
+.bluePickImage, .redPickImage {
+  width: 105px;
+  height: 165px;
+  border-radius: 5px;
+}
+
+/* Container around both draft teams */
+
+.draftContainer {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Container for Blue Team draft picks */
+
+.blueContainer {
+  margin: 10px;
+  border: solid rgba(0, 0, 255, 0.25) 6px;
+  border-radius: 5px;
+}
+
+/* Individual Blue Team champion pick elements */
+
+.blueDraft {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* Container for Red Team draft picks */
+
+.redContainer {
+  margin: 10px;
+  border: solid rgba(255, 0, 0, 0.25) 6px;
+  border-radius: 5px;
+}
+
+/* Individual Red Team champion pick elements */
+
+.redDraft {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*** All Champions ***/
+
+/* Container for all champions available to be picked/banned. */
+
+.championContainer {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  max-width: 1250px;
+  border: solid rgba(63, 63, 63, 0.685) 6px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+/* Container for individual champions (name and image) */
+
+.champion {
+  margin: 5px;
+  width: 115px;
+  height: 185px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.74);
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+  background-color: black;
+  transition: .2s;
+}
+
+/* Image and hover effects for individual champions */
+
+.championImage {
+  width: 115px;
+  height: 165px;
+  z-index: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.champion:hover {
+  text-shadow: 0 0 0  cornsilk;
+  color: transparent;
+  box-shadow: 1px 1px 1px 2px rgba(255, 255, 255, 0.521);
+  scale: 1.2;
+  transform: scale(1.05);
+  transition: .05s;
+}
+
+/*** Bans ***/
+
+/* Containers for red/blue bans(including heders) */
+.blueBanContainer {
+  margin: 10px;
+  border: solid rgba(0, 0, 255, 0.25) 6px;
+  border-radius: 5px;
+}
+
+.redBanContainer {
+  margin: 10px;
+  border: solid rgba(255, 0, 0, 0.25) 6px;
+  border-radius: 5px;
+}
+
+/* All ban picks */
+
+.blueBanList, .redBanList {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* Individual ban picks */
+
+.blueBan, .redBan {
+  margin: 6px;
+  width: 105px;
+  height: 185px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.74);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: black;
+}
+
+/*** Draft Submission Button ***/
+
+.buttonContainer {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+button {
+  font-size: medium;
+  font-weight: bolder;
+  text-shadow:  1px 1px 1px rgba(243, 243, 243, 0.788);
+  margin-top: 10px;
+  margin-bottom: 50px;
+  background-color: rgba(22, 22, 22, 0.445);
+  height: 45px;
+  border-bottom: solid 2px rgba(148, 146, 146, 0.329);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow:  1px 1px 1px 2px rgba(7, 7, 7, 0.774);
+  border-radius: 5px;
+  cursor: pointer;
+  outline:none;
+  color: transparent;
+  width: 135px;
+}
+
+button:active {
+  background-color: white;
+  color: #111111;
+  transition: .15s;
+  transition-duration: .15s;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.747);
+  text-shadow:  1px 1px 1px rgba(243, 243, 243, 0.788);
+}
+
+button:hover {
+  background-color: rgba(233, 233, 233, 0.589);
+  transition: .15s;
+  transition-duration: .15s;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.747);
+  text-shadow:  1px 1px 1px rgb(0, 0, 0);
+  outline:none;
+}
+
+button:focus {
+  outline:none;
+  color: transparent;
+}
+
+.draftSubmitButton {
+  margin-right: 10px;
+}
+
+.draftClearButton {
+  margin-left: 10px;
+}
+
+.submittedMessageContainer {
+  height: 35px;
+}
+
+.submitMessage {
+  width: 150px;
+  background-color: rgba(0, 255, 34, 0.144);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.562);
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.statsContainer {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  max-width: 1250px;
+  border: solid rgba(63, 63, 63, 0.685) 6px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.clicked {
+  pointer-events: none;
+  opacity: 20%;
+}
+
+.championStats {
+  font-size: 15px;
+  margin: 5px;
+  margin-bottom: 55px;
+  width: 115px;
+  height: 185px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.74);
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+  background-color: black;
+  transition: .2s;
+}
+
+input {
+  display: none;
+}
+
+p {
+  font-size: small;
+  margin: 0;
+  padding: 0;
+}
