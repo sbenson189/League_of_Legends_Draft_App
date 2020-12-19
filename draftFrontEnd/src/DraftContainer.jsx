@@ -11,6 +11,7 @@ export function DraftContainer({selectedChampions}) {
     const handleFormSubmit = (evt) => {
         evt.preventDefault()
         setIsLoading(isLoading = true)
+
         axios.post('/stats', {
             "blue_pick1": getName(blueTeam, 5),
             "blue_pick2": getName(blueTeam, 6),
@@ -49,6 +50,7 @@ export function DraftContainer({selectedChampions}) {
     const blueTeam = selectedChampions.filter(x => x.team === 'blue')
 
     return (
+        
         <>
             <h1>League Draft</h1>
             <form action="/stats" method="post" onSubmit={handleFormSubmit}>
@@ -57,23 +59,23 @@ export function DraftContainer({selectedChampions}) {
                         <h3 className='blueTeamTitle'>Blue Team</h3>
                         <div className='blueDraft'>
                             <div className='bluePickOne bluePick'>
-                                {getName(blueTeam, 5)}
+                                <p>{getName(blueTeam, 5)}</p>
                                 <img className='bluePickImage' src={getSource(blueTeam, 5)} alt="" name="blue_pick1"/>
                             </div>
                             <div className='bluePickTwo bluePick'>
-                                {getName(blueTeam, 6)}
+                                <p>{getName(blueTeam, 6)}</p>
                                 <img className='bluePickImage' src={getSource(blueTeam, 6)} alt="" name="blue_pick2"/>
                             </div>
                             <div className='bluePickThree bluePick'>
-                                {getName(blueTeam, 7)}
+                                <p>{getName(blueTeam, 7)}</p>
                                 <img className='bluePickImage' src={getSource(blueTeam, 7)} alt="" name="blue_pick3"/>
                             </div>
                             <div className='bluePickFour bluePick'>
-                                {getName(blueTeam, 8)}
+                                <p>{getName(blueTeam, 8)}</p>
                                 <img className='bluePickImage' src={getSource(blueTeam, 8)} alt="" name="blue_pick4"/>
                             </div>
                             <div className='bluePickFive bluePick'>
-                                {getName(blueTeam, 9)}
+                                <p>{getName(blueTeam, 9)}</p>
                                 <img className='bluePickImage' src={getSource(blueTeam, 9)} alt="" name="blue_pick5"/>
                             </div>
                         </div>
@@ -81,23 +83,23 @@ export function DraftContainer({selectedChampions}) {
                             <h3 className='blueTeamTitle'>Blue Team Bans</h3>
                             <div className='blueBanList'>
                                 <div className='blueBanOne blueBan'>
-                                    {getName(blueTeam, 0)}
+                                    <p>{getName(blueTeam, 0)}</p>
                                     <img className='redPickImage' src={getSource(blueTeam, 0)} alt="" name="blue_ban1"/>
                                 </div>
                                 <div className='blueBanTwo blueBan'>
-                                    {getName(blueTeam, 1)}
+                                    <p>{getName(blueTeam, 1)}</p>
                                     <img className='bluePickImage' src={getSource(blueTeam, 1)} alt="" name="blue_ban2"/>
                                 </div>
                                 <div className='blueBanThree blueBan'>
-                                    {getName(blueTeam, 2)}
+                                    <p>{getName(blueTeam, 2)}</p>
                                     <img className='bluePickImage' src={getSource(blueTeam, 2)} alt="" name="blue_ban3"/>
                                 </div>
                                 <div className='blueBanFour blueBan'>
-                                    {getName(blueTeam, 3)}
+                                    <p>{getName(blueTeam, 3)}</p>
                                     <img className='bluePickImage' src={getSource(blueTeam, 3)} alt="" name="blue_ban4"/>
                                 </div>
                                 <div className='blueBanFive blueBan'>
-                                    {getName(blueTeam, 4)}
+                                    <p>{getName(blueTeam, 4)}</p>
                                     <img className='bluePickImage' src={getSource(blueTeam, 4)} alt="" name="blue_ban5"/>
                                 </div>
                             </div>
@@ -107,23 +109,23 @@ export function DraftContainer({selectedChampions}) {
                         <h3 className='redTeamTitle'>Red Team</h3>
                         <div className='redDraft'>
                             <div className='redPickOne redPick'>
-                                {getName(redTeam, 5)}
+                                <p>{getName(redTeam, 5)}</p>
                                 <img className='redPickImage' src={getSource(redTeam, 5)} alt="" name="red_pick1"/>
                             </div>
                             <div className='redPickTwo redPick'>
-                                {getName(redTeam, 6)}
+                                <p>{getName(redTeam, 6)}</p>
                                 <img className='redPickImage' src={getSource(redTeam, 6)} alt="" name="red_pick2"/>
                             </div>
                             <div className='redPickThree redPick'>
-                                {getName(redTeam, 7)}
+                                <p>{getName(redTeam, 7)}</p>
                                 <img className='redPickImage' src={getSource(redTeam, 7)} alt="" name="red_pick3"/>
                             </div>
                             <div className='redPickFour redPick'>
-                                {getName(redTeam, 8)}
+                                <p>{getName(redTeam, 8)}</p>
                                 <img className='redPickImage' src={getSource(redTeam, 8)} alt="" name="red_pick4"/>
                             </div>
                             <div className='redPickFive redPick'>
-                                {getName(redTeam, 9)}
+                                <p>{getName(redTeam, 9)}</p>
                                 <img className='redPickImage' src={getSource(redTeam, 9)} alt="" name="red_pick5"/>
                             </div>
                         </div>
@@ -131,23 +133,23 @@ export function DraftContainer({selectedChampions}) {
                             <h3 className='redTeamTitle'>Red Team Bans</h3>
                             <div className='redBanList'>
                                 <div className='redBanOne redBan'>
-                                    {getName(redTeam, 0)}
+                                    <p>{getName(redTeam, 0)}</p>
                                     <img className='redPickImage' src={getSource(redTeam, 0)} alt="" name="red_ban1"/>
                                 </div>
                                 <div className='redBanTwo redBan'>
-                                    {getName(redTeam, 1)}
+                                    <p>{getName(redTeam, 1)}</p>
                                     <img className='redPickImage' src={getSource(redTeam, 1)} alt="" name="red_ban2"/>
                                 </div>
                                 <div className='redBanThree redBan'>
-                                    {getName(redTeam, 2)}
+                                    <p>{getName(redTeam, 2)}</p>
                                     <img className='redPickImage' src={getSource(redTeam, 2)} alt="" name="red_ban3"/>
                                 </div>
                                 <div className='redBanFour redBan'>
-                                    {getName(redTeam, 3)}
+                                    <p>{getName(redTeam, 3)}</p>
                                     <img className='redPickImage' src={getSource(redTeam, 3)} alt="" name="red_ban4"/>
                                 </div>
                                 <div className='redBanFive redBan'>
-                                    {getName(redTeam, 4)}
+                                    <p>{getName(redTeam, 4)}</p>
                                     <img className='redPickImage' src={getSource(redTeam, 4)} alt="" name="red_ban5"/>
                                 </div>
                             </div>

@@ -4,31 +4,40 @@ import {getData} from './apiFunctions'
 const baseURL = 'http://ddragon.leagueoflegends.com/cdn'
 const imageUrl = '/img/champion/loading/'
 
-export function Champions ({addSelectedChampion}) {
-
+export function Champions ({addSelectedChampion, selectedChampions}) {
+    
     const [champions, setChampions] = useState([])
-
-    let [count, setCount] = useState(0)
+    const [count, setCount] = useState(0)
 
     const teamCalulator = () => {
-        setCount(count < 20 ? count + 1 : count = 20)
+        setCount(count < 20 ? count + 1 : 20)
         return count < 10 ? 'blue' : 'red'
     }
 
     useEffect(() => {getData(champions).then(setChampions)}, [])
 
+    const filterSelected = (selectedChampions, clicked) => {
+        const selectedName = selectedChampions.map(champion => champion.name)
+        return selectedName.includes(clicked) ? 'champion clicked' : 'champion'
+    }
+
+    return <ChampionsGrid filterSelected={filterSelected} champions={champions} teamCalulator={teamCalulator} count={count} addSelectedChampion={addSelectedChampion} selectedChampions={selectedChampions}/>
+}
+
+const ChampionsGrid = ({filterSelected, champions, teamCalulator, count, addSelectedChampion, selectedChampions}) => {
     return (
         champions.map (
             champion => {
                 return (
                     <div 
-                        className='champion' 
+                        className={filterSelected(selectedChampions, champion)}
                         id={`${champion}`} 
                         name={champion} 
-                        onClick={(evt) => {
+                        onClick={() => {
+                            if(count === 20) return
                             addSelectedChampion({name: champion, team: teamCalulator()});
-                            evt.target.parentElement.className='champion clicked';
-                    }}>
+                        }
+                    }>
                         <p>{champion}</p>
                         <img 
                             className={`championImage ${champion}`} 
@@ -44,5 +53,3 @@ export function Champions ({addSelectedChampion}) {
 }
 
 export default Champions
-
-

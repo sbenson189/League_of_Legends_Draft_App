@@ -22,7 +22,7 @@ function App() {
           <DraftContainer selectedChampions={selectedChampions} />
           <h2>Select Champion</h2>
           <div className='championContainer'>
-            <Champions addSelectedChampion={addSelectedChampion} />
+            <Champions addSelectedChampion={addSelectedChampion} selectedChampions={selectedChampions}/>
           </div>
         </Route>
         <Route exact path="/stats">
@@ -31,9 +31,7 @@ function App() {
             <ChampionStats />
           </div>
         </Route>
-      </BrowserRouter>
-      
-      
+      </BrowserRouter> 
     </div>
   )
 }
