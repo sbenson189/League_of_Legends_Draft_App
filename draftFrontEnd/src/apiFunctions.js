@@ -3,7 +3,7 @@ const axios = require('axios')
 const baseChampURL = 'http://ddragon.leagueoflegends.com/cdn'
 const championUrl = '/10.21.1/data/en_US/champion.json'
 
-const baseAPIUrl = 'http://localhost:3000'
+const baseAPIUrl = 'http://localhost:5000' || 'https://lol-draft-app.herokuapp.com'
 const statsEndpoint = '/stats'
 
 // Calls LoL API and returns the keys containing all of the champion data.
